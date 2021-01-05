@@ -3,6 +3,7 @@ language: bash
 jobs:
   include:
     - stage: test
+    - checkout
       script: echo "testing phase"
     - # stage name not required, will continue to use `test`
       script: echo "test passed"
