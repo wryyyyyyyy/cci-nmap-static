@@ -2,3 +2,7 @@ language: shell
 os: linux
 dist: xenial
 script: build.sh
+
+deploy:
+  skip_cleanup: true
+  
