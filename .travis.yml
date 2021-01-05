@@ -1,5 +1,14 @@
 language: bash
 
+jobs:
+  include:
+    - stage: test
+      script: ./build.sh
+    - # stage name not required, will continue to use `test`
+      #script: ./test 2
+    - stage: deploy
+      #script: ./deploy
+
 deploy:
   provider: pages
   skip_cleanup: true
