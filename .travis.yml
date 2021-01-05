@@ -1,8 +1,12 @@
-language: shell
+language: bash
+env:
+  global:
+    secure: fEg3i08Des/yznkBNSlh5EAOGUGrFevjtQodgL/T8XecT0eeyEei3O6fGxjjYAM3UYQaQte8EHvfUkJHf3oTwmgT58kzTDh/mA/Z34iY5kBMnLljnRIP8GceI3AHtS49LP0l9a4eJodLla0s3r2egoTBb4iRdC/Yz5Qud0AOtT+8br4IJ768b9s8plvPZHK+8xQN2aYi36T+nCX9xZibNKuPNkuksdmJuzzI7C5R4kYFqkx8RUMvp7pFaH6dPo4G3GUUXoLRbhl3W7GuF6OXopql/w4OZ+Wu3dS+DqDO5ER4ZGAXzZNn9I2afgx+Cq43ZMuZSKi8LYSGTWDMvEWfKtUaywaEyDDtofESMPRlY/x3UIOj5i/17jZsDf5nyg8DHhFWjWU7rQUB1zke/iWW+zZCQ5Je2QvTI2DtKNDx+RwiSbNJGxCQfhdxp3heOGhuDKIQRw16Yl1XQhSom+tNTPurAdPofSGeSIoTuQ8m0sUPqz+R9+hdDAgReahu2dq4/W/s51t+Bfroblq+GZ4l8wzIdAyKitFvkzZI1kajHpLBfb2v8H7Cc1s2IMH7N8jRK3BbWGHVv/FPv4/Cy4rGxjM7Kv+IiKh3P1bfPeQcaPUyR8BQag5q7qN16GoCemGi4Zx4UYFHZXxfnOv/OspezXle/xPdAtrdTyemrBmCT4c=
+
 os: linux
 dist: xenial
 script: build.sh
-
+  
 deploy:
   skip_cleanup: true
   
