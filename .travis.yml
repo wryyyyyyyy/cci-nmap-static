@@ -4,15 +4,23 @@ arch: amd64
 os: linux
 dist: xenial
 
-
 jobs:
   include:
     - stage: test
       script: sudo apt get update
     - # stage name not required, will continue to use `test`
-      script: sudo apt-get install cowsay
+      install: sudo apt-get install cowsay
     - stage: deploy
-      script: sudo sowsay say `whoami`
+      script: sudo sowsay say moo
+      
+before_install:
+  env:
+    global:
+      - DEPLOY_TOKEN: $DEPLOY_TOKEN
+      - TRAVIS_TOKEN: $TRAVIS_TOKEN
+      - GITHUB_TOKEN: $GITHUB_TOKEN
+    jobs:
+
 
 deploy:
   provider: pages
