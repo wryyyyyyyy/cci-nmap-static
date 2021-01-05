@@ -8,18 +8,18 @@ dist: xenial
 jobs:
   include:
     - stage: test
-      script: echo "testing phase"
+      script: sudo apt get update
     - # stage name not required, will continue to use `test`
-      script: echo "test passed"
+      script: sudo apt-get install cowsay
     - stage: deploy
-      script: bash build.sh
+      script: sudo sowsay say `whoami`
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  deploy_token: $DEPLOY_TOKEN
-  travis_token: $TRAVIS_TOKEN
+#  deploy_token: $DEPLOY_TOKEN
+#  travis_token: $TRAVIS_TOKEN
   keep_history: true
   on:
     branch: main
