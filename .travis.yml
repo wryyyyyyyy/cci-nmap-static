@@ -1,27 +1,4 @@
 language: shell
-virt: vm
-arch: amd64
 os: linux
 dist: xenial
-
-jobs:
-  include:
-    - stage: test
-      script: sudo echo update
-      install: ./build.sh
-    - stage: deploy
-      script: sudo echo moo
-      
-before_install:
-  env:
-    global:
-      - GITHUB_TOKEN: $GITHUB_TOKEN
-      - ACCESS_TOKEN: $DEPLOY_TOKEN
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: main
+script: build.sh
