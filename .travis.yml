@@ -3,11 +3,11 @@ language: bash
 jobs:
   include:
     - stage: test
-      script: ./build.sh
+      script: echo "testing phase"
     - # stage name not required, will continue to use `test`
-      #script: ./test 2
+      script: echo "test passed"
     - stage: deploy
-      #script: ./deploy
+      script: ./build.sh
 
 deploy:
   provider: pages
