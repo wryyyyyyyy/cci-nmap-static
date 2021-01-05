@@ -7,24 +7,21 @@ dist: xenial
 jobs:
   include:
     - stage: test
-      script: sudo apt get update
-      install: sudo apt-get install cowsay
+      script: sudo echo update
+      install: ./build.sh
     - stage: deploy
-      script: sudo sowsay say moo
+      script: sudo echo moo
       
 before_install:
   env:
     global:
-      - DEPLOY_TOKEN: $DEPLOY_TOKEN
-      - TRAVIS_TOKEN: $TRAVIS_TOKEN
       - GITHUB_TOKEN: $GITHUB_TOKEN
+      - ACCESS_TOKEN: $DEPLOY_TOKEN
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-#  deploy_token: $DEPLOY_TOKEN
-#  travis_token: $TRAVIS_TOKEN
   keep_history: true
   on:
     branch: main
