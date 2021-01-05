@@ -13,6 +13,8 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+  deploy_token: $DEPLOY_TOKEN
+  travis_token: $TRAVIS_TOKEN
   keep_history: true
   on:
     branch: main
