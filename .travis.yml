@@ -1,16 +1,14 @@
 language: shell
- root:
-  virt: vm
-  arch: amd64
-  os: linux
-  dist: xenial
+virt: vm
+arch: amd64
+os: linux
+dist: xenial
 
 jobs:
   include:
     - stage: test
       script: sudo apt get update
       install: sudo apt-get install cowsay
-      
     - stage: deploy
       script: sudo sowsay say moo
       
