@@ -1,0 +1,9 @@
+language: bash
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  travis_token: $TRAVIS_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: main
