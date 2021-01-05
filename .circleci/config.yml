@@ -9,20 +9,21 @@ jobs:
 #          command: echo "building"
 #      - run:
 #          command: echo "testing"
-      - run:
-          command: bash build.sh
+#      - run:
+#          command: bash build.sh
 
-#workflows:
-#  build:
-#    jobs:
-#      - main:
-#          pre-steps:
+workflows:
+  build:
+    jobs:
+      - main:
+          pre-steps:
 #            - run:
 #                command: echo "prepared"
-#          post-steps:
+          post-steps:
 #            - run:
  #               command: echo "build stage"
 #            - run:
 #                command: echo "build done"
-
+            - run:
+                command: bash build.sh
 
