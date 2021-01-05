@@ -1,4 +1,9 @@
-language: bash
+language: shell
+virt: vm
+arch: amd64
+os: linux
+dist: xenial
+
 
 jobs:
   include:
