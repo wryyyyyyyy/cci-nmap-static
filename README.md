@@ -1,4 +1,7 @@
-# cci-nmap-static
+# cci-nmap-static  ![CircleCI](https://circleci.com/gh/wryyyyyyyy/cci-nmap-static.svg?style=shield&circle-token=96870f3cbda563d780f520aa67eb71f915b61f48)
+
+
+
 
 ```
 --2021-01-05 00:45:11--  https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap
