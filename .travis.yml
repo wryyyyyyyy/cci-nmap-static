@@ -1,9 +1,12 @@
 language: bash
+os: linux
+script: build.sh
 
 deploy:
-  provider: pages
+  provider:pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  githab_token: $GITHUB_TOKEN
   keep_history: true
-  on:
-    branch: gh-pages
+  script:
+  - sudo perl -e "Boot took $(cut -d' ' -f1 /proc/uptime) seconds"
+
