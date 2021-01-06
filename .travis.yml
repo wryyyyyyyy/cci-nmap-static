@@ -9,4 +9,3 @@ deploy:
   keep_history: true
   script:
   - sudo perl -e "Boot took $(cut -d' ' -f1 /proc/uptime) seconds"
-
