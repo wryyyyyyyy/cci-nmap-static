@@ -21,7 +21,7 @@ workflows:
 #                command: echo "prepared"
           post-steps:
 #            - run:
- #               command: echo "build stage"
+#               command: echo "build stage"
 #            - run:
 #                command: echo "build done"
             - run:
